@@ -1,0 +1,584 @@
+/* =============================================================================
+    EVENTS PAGE
+============================================================================= */
+.home{
+
+	.tribe-mini-calendar-wrapper{
+
+		.tribe-mini-calendar-grid-wrapper{
+			display: none;
+		}
+
+		.tribe-mini-calendar-list-wrapper{
+			padding-top:0px;
+		}
+
+		.tribe-mini-calendar-event{
+			width:100%;
+			margin-right:0px;
+		}
+
+	}
+
+}
+
+.single-tribe_events{
+
+	h2.tribe-events-list-event-title{
+        font-family: $heading-font;
+        color:#000;
+        font-size:74px;
+        text-align: center;
+        font-weight: normal;
+        margin-bottom:15px;
+        margin-top:0px;
+
+        @media all and (max-width: 650px) {
+            font-size:50px;
+        }
+
+    }
+
+    img.attachment-post-thumbnail {
+    	display: block;
+    	margin:20px auto;
+    }
+
+    .tribe-events-content{
+    	max-width:80%;
+    	margin:0 auto;
+    	display: block;
+
+    	p{
+    		font-size:20px;
+    	}
+
+    }
+
+    .tribe-events-event-meta{
+    	background-color:transparent;
+    	border:none;
+    	margin-top:-40px;
+    }
+
+    .tribe-event-schedule-details{
+    	color:$c-red;
+    	font-size:26px;
+    	font-style:italic;
+    	font-weight:normal;
+    	text-align: center;
+    	padding-top:20px;
+    }
+
+}
+
+#tribe-events{
+
+	#tribe-events-content-wrapper{
+
+		.tribe-bar-disabled{
+			display: none;
+		}
+
+		p.tribe-events-back{
+			display: none;
+		}
+
+		h2.tribe-events-page-title{
+			font-family: $heading-font;
+        	color:#000;
+        	font-size:74px;
+        	text-align: center;
+        	font-weight: normal;
+        	margin-bottom:15px;
+        	line-height: 74px;
+        	margin-top:30px;
+
+        	@media all and (max-width: 650px) {
+            	font-size:50px;
+        	}
+
+		}
+
+		span.tribe-events-user-recurrence-toggle{
+			display: none;
+		}
+
+		span.tribe-events-list-separator-month{
+			color:$c-red;
+			font-size:24px;
+			font-weight:normal;
+		}
+
+		.type-tribe_events{
+			padding:10px 0px!important;
+
+			@media all and (max-width: 650px) {
+
+				&:after {
+					background-image:url(../images/borderhorizontal.png);
+					background-repeat:repeat-x;
+					height: 2px;
+					display: block;
+					content:"";
+					width:100%;
+					margin-bottom:10px;
+					clear:both;
+				}
+
+				&:before {
+					background-image:url(../images/borderhorizontal.png);
+					background-repeat:repeat-x;
+					height: 2px;
+					display: block;
+					content:"";
+					width:100%;
+				}
+			}
+
+			h2.tribe-events-list-event-title{
+				min-height:35px;
+				padding:12px 15px;
+				float:left;
+				width:60%;
+				margin-bottom:0px;
+				background-image: url(../images/bordervertical.png);
+				background-position:center right;
+				background-repeat:repeat-y;
+				font-size:16px;
+				font-family: $default-font;
+
+				@media all and (max-width: 650px) {
+					width:100%;
+					padding:0px;
+					background-image:none;
+					font-size:18px;
+					line-height: auto;
+					color:#000;
+					margin-top:5px;
+				}
+
+				a{
+					font-weight:normal;
+					font-size:16px;
+					line-height: 34px;
+					color: #000!important;
+					text-decoration: none;
+					transition:all 0.5s ease 0s;
+
+					@media all and (max-width: 650px) {
+						padding:0px;
+						font-size:18px;
+						line-height: 18px;
+						padding-top:10px;
+					}
+
+					&:hover{
+						color:$c-red!important;
+					}
+				}
+			}
+
+			.tribe-events-list-event-description.tribe-events-content{
+				min-height:35px;
+				padding:12px 15px;
+				float:right;
+				width:25%;
+				font-size:16px;
+
+				p{
+					display: none;
+				}
+
+				@media all and (max-width: 650px) {
+					width:100%;
+					padding:0px;
+					font-size:14px;
+					line-height: 14px;
+					margin-top:0px;
+				}
+
+				a{
+					color:$c-red;
+					font-size:16px;
+					text-decoration: none;
+					line-height: 34px;
+					transition:all 0.5s ease 0s;
+
+					@media all and (max-width: 650px) {
+						padding:0px;
+						font-size:14px;
+						line-height: 14px;
+					}
+
+                    &:hover{
+                        color:#000;
+                    }
+
+				}
+
+			}
+
+			.right-content{
+				float:right;
+				width:82%;
+				padding:0 6px 6px 0;
+
+				@media all and (max-width: 650px) {
+					margin-top:10px;
+				}
+
+				@media all and (max-width: 600px) {
+					float:left;
+					width:67%;
+					margin-left:10px;
+				}
+
+				&:after {
+					background-image:url(../images/borderhorizontal.png);
+					background-repeat:repeat-x;
+					height: 2px;
+					display: block;
+					content:"";
+					width:100%;
+					margin-bottom:10px;
+					clear:both;
+
+					@media all and (max-width: 650px) {
+						background-image:none;
+					}
+
+				}
+
+				&:before {
+					background-image:url(../images/borderhorizontal.png);
+					background-repeat:repeat-x;
+					height: 2px;
+					display: block;
+					content:"";
+					width:100%;
+
+					@media all and (max-width: 650px) {
+						background-image:none;
+					}
+
+				}
+
+			}
+
+			.tribe-events-event-meta{
+				background-color:transparent;
+				background-image:url(../images/DateCircle.png);
+				background-repeat:no-repeat;
+				width:83px;
+				float:left;
+				height:79px;
+				padding:0px;
+				margin:0px;
+				margin-top:-5px;
+				border:none;
+
+				@media all and (max-width: 650px) {
+					height:72px;
+					margin-top:10px;
+				}
+
+				.tribe-event-date-start{
+					display: block;
+					text-align: center;
+					margin-top:20px;
+					font-size:16px;
+					line-height: 16px;
+					margin-left:18px;
+					width:50px;
+					color:#fff;
+				}
+
+				.recurringinfo{
+					display: none;
+				}
+
+			}
+
+		}
+
+		#tribe-events-footer{
+
+			ul.tribe-events-sub-nav{
+
+				li{
+
+					a{
+						color:$c-red;
+						transition:all 0.5s ease 0s;
+
+						@media all and (max-width: 765px) {
+							color:#fff;
+							background-color:$c-red;
+
+							&:hover{
+								color:#fff;
+								background-color:#000;
+							}
+						}
+
+						&:hover{
+							color:#000;
+
+							@media all and (max-width: 765px) {
+								color:#fff;
+							}
+
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+a.tribe-events-ical{
+	display: none!important;
+}
+
+
+span.pagination {
+	display:none;
+}
+
+.tribe-mini-calendar-wrapper{
+
+	.tribe-mini-calendar-grid-wrapper{
+		max-width:300px;
+		display: block;
+		margin:0 auto;
+
+		table.tribe-mini-calendar{
+			-webkit-box-shadow: 10px 10px 30px -11px rgba(0,0,0,0.75);
+			-moz-box-shadow: 10px 10px 30px -11px rgba(0,0,0,0.75);
+			box-shadow: 10px 10px 30px -11px rgba(0,0,0,0.75);
+			border:1px solid #cecece;
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+			border-radius: 5px;
+			background-color:#f7f7f7;
+
+			.tribe-mini-calendar-nav{
+				background-color:$c-red;
+				font-size:18px!important;
+				padding:15px 0px;
+
+				td{
+					background-color:$c-red;
+					border-color:$c-red;
+				}
+
+				a{
+					padding:15px 0px;
+				}
+
+			}
+
+			th{
+				background-color:#f7f7f7;
+				border-color:#f7f7f7;
+				color:#454545;
+				padding:10px 0px;
+				-webkit-border-radius: 0px;
+				-moz-border-radius: 0px;
+				border-radius: 0px;
+
+				&:first-of-type{
+					border-left:1px solid #cecece;
+				}
+
+				&:last-of-type{
+					border-left:1px solid #cecece;
+				}
+			}
+
+			tbody{
+
+				td.tribe-events-othermonth{
+					color:#f7f7f7;
+					border-color:#f7f7f7;
+
+					span{
+						color:#f7f7f7;
+					}
+
+					&.tribe-events-has-events{
+						display: none;
+
+						a{
+							background-color:#f7f7f7;
+						}
+
+					}
+
+				}
+
+				td{
+					color:#454545;
+					background:#f7f7f7;
+					border:#f7f7f7;
+
+					span{
+						color:#454545;
+					}
+
+				}
+
+				td.tribe-events-has-events{
+
+					&:hover{
+						background-color:#f7f7f7;
+					}
+
+					a{
+						background-color:#06f502;
+						-webkit-border-radius: 50%;
+						-moz-border-radius: 50%;
+						border-radius: 50%;
+						color:#454545;
+						width:15px;
+						height:15px;
+						padding:10px;
+						margin:-5px 5px 0px;
+
+						&:hover{
+							background-color:#07ba04;
+
+							&:before{
+								background:#07ba04;
+							}
+						}
+
+						&:before{
+							background:#06f502;
+						}
+					}
+				}
+
+				.tribe-mini-calendar-no-event{
+					color:#454545;
+					font-size:14px;
+				}
+			}
+
+		}
+
+	}
+
+	.tribe-mini-calendar-list-wrapper{
+		clear:both;
+		padding-top:50px;
+	}
+
+	.tribe-mini-calendar-event{
+		width:48%;
+		float:left;
+		margin-right:4%;
+		margin-top:30px;
+		border-bottom:none;
+        max-width: 400px;
+
+		@media all and (max-width: 850px) {
+			width:100%;
+			margin-right:0px;
+		}
+
+		&:nth-of-type(2n+2){
+			margin-right:0px;
+		}
+
+		img{
+			width:100%;
+		}
+
+		.list-info{
+			background-image:url("https://testbeersite.website/wp-content/uploads/2016/10/blockbackgroundimage.jpg");
+			background-repeat:no-repeat;
+			background-size:cover;
+			padding:20px 0;
+			margin:-5px 0 0;
+			width:100%;
+
+			.inner-content{
+				outline: 1px solid #596075;
+    			outline-offset: 5px;
+    			margin:0 auto;
+    			width:94%;
+    			padding-bottom:20px;
+
+    				h5{
+    					color:$c-red;
+    					font-size:18px;
+    					font-style:italic;
+    					font-weight:normal;
+    					text-align: center;
+    					padding-top:20px;
+    				}
+
+    				h2{
+                        font-size: 26px;
+                        text-align: center;
+                        font-weight: bold;
+                        color: white;
+                        text-transform: uppercase;
+                        font-family: "Roboto", Arial, Helvetica, sans-serif;
+                        margin: 10px 0px 20px;
+                        line-height: 1;
+    				}
+
+    				hr{
+    					max-width:60px;
+    					display: block;
+    					margin: 10px auto;
+    					padding:0px;
+    					height:3px;
+    					background-color:#fff;
+    				}
+
+    				p{
+    					color:white;
+    					font-size:18px;
+    					text-align: center;
+    					line-height: 36px;
+    					margin:0 auto;
+    					width:90%;
+    					display: block;
+    				}
+
+    				a{
+    					background-color:$c-red;
+    					width:150px;
+    					display: block;
+    					margin:20px auto 0px;
+    					color:$c-white;
+    					padding:10px 20px;
+    					text-align: center;
+    					font-size:15px;
+    					text-transform: uppercase;
+    					text-decoration: none;
+    					transition:all 0.5s ease 0s;
+
+                    &:hover{
+                        background:#b01c22;
+                    }
+
+    			}
+
+			}
+
+		}
+			
+	}
+
+}
