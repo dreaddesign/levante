@@ -69,7 +69,11 @@
     	text-align: center;
     	padding-top:20px;
     }
-
+    .top-link {
+        @media screen and (min-width: 650px) {
+            margin-top: 60px;
+        }
+    }
 }
 
 #tribe-events{

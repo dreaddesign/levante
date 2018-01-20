@@ -34,7 +34,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div class="tribe-this-week-widget-weekday-wrapper <?php echo esc_html( 'true' === $this_week_template_vars['hide_weekends'] ? 'tribe-this-week-widget-hide-weekends' : '' );  ?>" >
 
 		<?php foreach ( $week_days as $day ) : ?>
-
+			<?php var_dump($day); ?>
 			<!-- This Week Day -->
 			<?php tribe_get_template_part( 'pro/widgets/this-week/loop-grid-day', 'grid-dau', array( 'day' => $day, 'this_week_template_vars' => $this_week_template_vars ) ); ?>
 

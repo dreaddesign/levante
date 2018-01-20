@@ -13,7 +13,7 @@
 	}
 
 	a{
-		color:$c-red;
+		//color:$c-red;
 		text-decoration: none;
         transition:all 0.5s ease 0s;
 
@@ -60,6 +60,7 @@
         display: inline-block;
         float: left;
         margin-right: 20px; 
+        width: 55%;
     }
 
 	.banner{
@@ -535,16 +536,22 @@
     }
 
     .rightvisit{
-        width:50%;
+        width:40%;
         float: right;
         z-index:9999;
         position:relative;
+        padding-left: 15px;
 
         .address--location {
             float: left;
             width: auto;
             padding: 15px;
             box-sizing: border-box;
+
+            a {
+                color: black;
+                text-decoration: none;
+            }
         }
 
         @media all and (max-width: 800px) {

@@ -92,12 +92,12 @@
             	<?php if(get_field('subscribe_title', 'option')) { ?>
             		<div class="subscribe">
                 		<h3><?php the_field('subscribe_title', 'option'); ?></h3>
-                        <?php echo do_shortcode("[gravityform id='2' title='false' description='false']"); ?>
+                        <?php echo do_shortcode("[gravityform id='2' title='false' description='false' tabindex='50']"); ?>
                 	</div><!--subscribe-->
             	<?php } ?>
                 <div class="footer--contact">
                     <a href="/contact">
-                        <h3>Contact Us!</h3>
+                        <h3>Contact Us</h3>
                     </a>
                 </div><!--subscribe-->
         	</div><!--/content-wrapper-->

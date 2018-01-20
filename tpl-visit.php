@@ -34,21 +34,21 @@ get_header(); ?>
                             </a>
                         </p>
                     </div>
-                    <div class="address--location">
-                        <p> 
-                            <b>The Stables</b><br>160 Park Road<br>
-                        Chester Springs, PA 19425
-                        </p>
-                        <p>
-                            <span>(484) 302-5118</span>
-                        </p>
-                        <p>
-                            <a href="https://www.google.com/maps/place/Levante+At+The+Stables/@40.080231,-75.690267,16z/data=!4m5!3m4!1s0x0:0x39fd58f048d6f7cb!8m2!3d40.0802313!4d-75.6902669?ll=40.080231,-75.690267&amp;z=16&amp;t=m&amp;hl=en-US&amp;gl=US&amp;mapclient=embed&amp;cid=4178593818307131339" target="_blank"> 
-                            <span>Directions</span>
-                            <img src="https://testbeersite.website/wp-content/themes/levante/images/nextarrow.png" alt="Next Arrow" class="arrow" scale="0">
-                            </a>
-                        </p>
-                    </div>
+<!--                     <div class="address--location">
+    <p> 
+        <b>The Stables</b><br>160 Park Road<br>
+    Chester Springs, PA 19425
+    </p>
+    <p>
+        <span>(484) 302-5118</span>
+    </p>
+    <p>
+        <a href="https://www.google.com/maps/place/Levante+At+The+Stables/@40.080231,-75.690267,16z/data=!4m5!3m4!1s0x0:0x39fd58f048d6f7cb!8m2!3d40.0802313!4d-75.6902669?ll=40.080231,-75.690267&amp;z=16&amp;t=m&amp;hl=en-US&amp;gl=US&amp;mapclient=embed&amp;cid=4178593818307131339" target="_blank"> 
+        <span>Directions</span>
+        <img src="https://testbeersite.website/wp-content/themes/levante/images/nextarrow.png" alt="Next Arrow" class="arrow" scale="0">
+        </a>
+    </p>
+</div> -->
                 </div>
             </div><!--content-wrapper main-->   
 	            <?php if (have_posts()): ?>
@@ -72,12 +72,38 @@ get_header(); ?>
                     <?php } ?>
 
                     <div class="left">
-                        <?php echo do_shortcode('[tribe_this_week category="stables-food-trucks" layout="vertical"]'); ?>
+                        <?php //echo do_shortcode('[tribe_this_week category="stables-food-trucks" layout="vertical"]');
+                            // Ensure the global $post variable is in scope
+  /*                          global $post;
+                             $day = date('w');
+                             $week_start = date('m-d-Y', strtotime('-'.$day.' days'));
+                             $week_end = date('m-d-Y', strtotime('+'.(6-$day).' days'));
+                            // Retrieve all events in October 2014
+                            $events = tribe_get_events( array(
+                                'eventDisplay' => 'custom',
+                                'start_date'   => $week_start,
+                                'end_date'     => $week_end
+                            ) );
+                             
+                            // Loop through the events: set up each one as
+                            // the current post then use template tags to
+                            // display the title and content
+                            foreach ( $events as $post ) {
+                                setup_postdata( $post );
+                             
+                                // This time, let's throw in an event-specific
+                                // template tag to show the date after the title!
+                                    echo "$post->post_title";
+                                    echo tribe_get_start_date( $post );
+                            }*/
+
+                         ?>
                     </div><!--left-->
 
                     <div class="right">
                         <div class="block">
-                            <?php echo do_shortcode( '[tappd-press-menu menu_id=2580]' );
+                            <?php echo do_shortcode( '[untappd-menu location=2580 theme=6796]' );
+                            // echo do_shortcode( '[tappd-press-menu menu_id=18007]' );
                             //echo do_shortcode('[untappd-menu location=2580 theme=6332624]'); ?>
                         </div><!--block-->
                     </div><!--right-->

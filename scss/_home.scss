@@ -574,12 +574,18 @@ section.five{
 }
 
 .tribe-this-week-widget-day-wrap{
-	width:82%;
+	width: 70%;
 	float:right;
 
 	@media all and (max-width: 650px) {
 		width: 60%;
 		max-height:65px;
+	}
+	@media screen and (min-width: 767px) {
+		width: 80%
+	}
+	@media screen and (min-width: 1100px) {
+		width: 75%
 	}
 
 	.this-week-no-events-msg{
@@ -787,4 +793,8 @@ section.five{
 		}
 	}
 
+}
+
+.folio {
+	color: black;
 }

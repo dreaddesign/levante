@@ -16,10 +16,13 @@ body {
 }
 a {
     color: $default-link-color;
-    text-decoration: none;
+    text-decoration: underline;
     &:hover, &:active {
         color: $default-font-color;
     }
+}
+.strip_link {
+    text-decoration: none;
 }
 input[type=text],
 input[type=password],
@@ -629,13 +632,25 @@ img.aligncenter, .wp-caption.aligncenter {
         width: 50%;
     }
     &--contact {
-        display: inline-block;
-        width: 33%;
-        margin-top: 45px;
+        width: 100%;
+        margin-top: 35px;
+        float: left;
+        @media screen and (min-width: 650px) {        
+            display: inline-block;
+            width: 15%;
+            margin-top: 35px;
+            float: right;
+    }
 
         a {
             color: white;
             text-decoration: none;
+            text-align: center;
+        }
+        h3 {
+            background-color: #cc2027;
+            display: inline-block;
+            padding: 5px 15px;
             text-align: center;
         }
     }
@@ -1015,7 +1030,7 @@ img.aligncenter, .wp-caption.aligncenter {
                 margin-top:10px;
 
                 input{
-                    margin-top:-61px;
+                    margin-top:-66px;
                     padding:0px 10px;
                     display: block;
                     min-height: 36px;

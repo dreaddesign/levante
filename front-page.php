@@ -31,40 +31,35 @@ get_header(); ?>
 <?php endif; ?>
 
 <section class="two">
-
     <hr class="mobile"></hr>
-
     <div class="content-wrapper">
         <?php if(get_field('section_2_title')) { ?>
-            <h1><a href="/beer/"><?php the_field('section_2_title'); ?></a></h1>
+            <h1><a class="folio strip_link" href="/beer/"><?php the_field('section_2_title'); ?></a></h1>
         <?php } ?>
-
         <div class="cycle-slideshow"
             data-cycle-fx="carousel"
             data-cycle-pause-on-hover="true"
             data-cycle-speed="200"
             data-cycle-next="#next"
             data-cycle-prev="#prev"
-            data-cycle-slides="> div"
+            data-cycle-slides=""
             >
 
             <?php $loop = new WP_Query( array( 'post_type' => 'beer' ) ); ?>
             <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
                 <?php if ( has_post_thumbnail() ) : ?>
                     <?php if(get_field('show_on_homepage')) : ?>
-                        <div>
-                            <a href="<?php the_permalink(); ?>">
-                                <?php the_post_thumbnail(); ?>
-                            </a>
-                        </div>
+                        <a href="<?php the_permalink(); ?>">
+                            <?php the_post_thumbnail(); ?>
+                        </a>
                     <?php endif; ?>
                 <?php endif; ?>
             <?php endwhile; wp_reset_query(); ?>
         </div><!--cycle-slideshow-->
 
         <div class=center>
-            <a href=# id="prev"><img src="<?php bloginfo('template_url'); ?>/images/prevarrow.png" alt="Previous Arrow" /></a>
-            <a href=# id="next"><img src="<?php bloginfo('template_url'); ?>/images/nextarrow.png" alt="Next Arrow" /></a>
+            <a href="#" id="prev"><img src="<?php bloginfo('template_url'); ?>/images/prevarrow.png" alt="Previous Arrow" /></a>
+            <a href="#" id="next"><img src="<?php bloginfo('template_url'); ?>/images/nextarrow.png" alt="Next Arrow" /></a>
         </div>
 
     </div><!--content-wrapper-->
@@ -127,7 +122,7 @@ get_header(); ?>
                          array(
                              'taxonomy' => 'tribe_events_cat',
                              'field' => 'slug',
-                             'terms' => 'stables-homepage',
+                             'terms' => 'homepage',
                              'operator' => 'IN'
                                 ),
                     ),
@@ -139,17 +134,18 @@ get_header(); ?>
                     'posts_per_page' => 3)
                 );
                 if ($upcoming->have_posts()) { ?>
-                    <?php echo do_shortcode('[tribe_events_list category="stables-homepage" limit="1"]'); ?>
+                    <?php echo do_shortcode('[tribe_events_list category="homepage" limit="3"]'); ?>
                 <?php } else { ?>
-                    <?php echo do_shortcode('[tribe_events_list category="stable-event" limit="1"]'); ?>
-                <?php } ?>
+                    <?php echo do_shortcode('[tribe_events_list category="event" limit="3"]'); ?>
+                <?php }
+                wp_reset_query();?>
             </div><!--block-->
         </div><!--right-->
 
         <div class="right">
             <div class="block">
                 <?php
-                $upcoming = new WP_Query();
+    /*            $upcoming = new WP_Query();
                 $upcoming->query( array(
                     'post_type'=> 'tribe_events',
                     'tax_query' => array(
@@ -166,13 +162,14 @@ get_header(); ?>
                     'orderby' => 'meta_value',
                     'order' => 'ASC',
                     'posts_per_page' => 3)
-                );
-                echo do_shortcode('[tribe_this_week category="food-trucks" layout="vertical"]');
+                );*/
+                //echo do_shortcode('[tribe_this_week category="food-trucks" layout="vertical"]');
                 //if ($upcoming->have_posts()) { ?>
-                    <?php// echo do_shortcode('[tribe_events_list category="homepage" limit="1"]'); ?>
-                <?php// } else { ?>
-                    <?php// echo do_shortcode('[tribe_events_list category="event" limit="1"]'); ?>
-                <?php// } ?>
+                    <?php//echo do_shortcode('[tribe_events_list category="homepage" limit="1"]'); ?>
+                <?php //} else { ?>
+                    <?php echo do_shortcode('[tribe_events_list category="event" limit="3"]'); ?>
+                <?php// }
+                ?>
             </div><!--block-->
         </div><!--right-->
     </div><!--content-wrapper-->
