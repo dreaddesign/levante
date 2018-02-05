@@ -1112,6 +1112,7 @@ img.aligncenter, .wp-caption.aligncenter {
 
 .km-toggle-answer {
     display: none;
+    width: 100%;
 }
 .km-toggle-faq {
     @media only screen and (max-width: 767px) {
@@ -1119,7 +1120,7 @@ img.aligncenter, .wp-caption.aligncenter {
     }
 }
 
-.km-icon--plus{
+.km-icon--plus {
     position: relative;
     width: 25px;
     height: 25px;
